@@ -1,3 +1,7 @@
-import ["./tokyonight-night.toml"]
+[general]
+
+import = [
+    "./tokyonight-night.toml",
+]
 
 
