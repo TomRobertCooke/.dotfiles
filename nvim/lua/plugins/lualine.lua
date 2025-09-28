@@ -6,9 +6,10 @@ return {
     config = function()
         require('lualine').setup({
             options = {
-                theme = 'dracula'
+                theme = 'auto'
             }
         })
+        require('transparent').clear_prefix('lualine')
     end
 
 }
