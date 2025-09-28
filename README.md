@@ -1,11 +1,25 @@
-This is my personal configuration, more to come soon.
+# README.md
 
-Current config includes:
-- Alacritty
-- Neovim with Lazy
+### This is my personal configuration, more to come soon.
 
-Planned:
-- LSP for Neovim
+
+#### Current config includes:
+
+##### **Neovim**
+
+- **Lazy**
+- **Tokyonight**
+- **Transparent**
+- **Telescope**
+- **Neotree**
+- **Treesitter**
+- **Lualine**
+
+##### Planned:
+- Neovim:
+    - LSP Support
+    - Harpoon
+    - Git Support
 - tmux
 
 

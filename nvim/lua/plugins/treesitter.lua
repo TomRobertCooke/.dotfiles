@@ -7,7 +7,7 @@ return {
 
     config = function()
         require('nvim-treesitter.configs').setup({
-            ensure_installed = { "c", "cpp", "cmake", "lua", "luadoc", "vim", "vimdoc", "python", "bash", "arduino", "toml" },
+            ensure_installed = { "c", "cpp", "cmake", "lua", "luadoc", "vim", "vimdoc", "python", "bash", "arduino", "toml", "markdown" },
             highlight = { enable = true },
             indent = { enable = true }
         })
