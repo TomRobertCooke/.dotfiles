@@ -1,3 +1,5 @@
+require("config.lsp-configs")
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
