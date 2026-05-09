@@ -15,6 +15,7 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+                sort_mru = true,
 			})
 			require("telescope").load_extension("ui-select")
 		end,

@@ -1,5 +1,4 @@
 return {
-
 	"mason-org/mason-lspconfig.nvim",
 	opts = {
 		ensure_installed = {
@@ -13,14 +12,8 @@ return {
 			"arduino_language_server",
 			"rust_analyzer",
 			"jdtls",
-		},
-		automatic_enable = {
-			"bashls",
-			"lua_ls",
-			"stylua",
-			"cmake",
-			"clangd",
-			"basedpyright",
+			"yamlls",
+			"jsonls",
 		},
 	},
 	dependencies = {
