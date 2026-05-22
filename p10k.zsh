@@ -233,9 +233,9 @@
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND='#7aa2f7'
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#a4daff'
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#7aa2f7'
   # Display anchor directory segments in bold.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=false
   # Don't shorten directories that contain any of these files. They are anchors.
   local anchor_files=(
     .bzr
@@ -519,15 +519,15 @@
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND='#15161e'
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND='#9ece6a'
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND='#9ece6a'
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND='#1a1b26'
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND='#15161e'
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND='#9ece6a'
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
