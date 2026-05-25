@@ -9,9 +9,8 @@ return {
 		require("tokyonight").setup({
 			transparent = vim.g.transparent_enabled,
 
-			--[[
-            --Borderless Telescope
-            on_highlights = function(hl, c)
+			--Borderless Telescope
+			on_highlights = function(hl, c)
 				local prompt = "#2d3149"
 				hl.TelescopeNormal = {
 					bg = c.bg_dark,
@@ -41,7 +40,6 @@ return {
 					fg = c.bg_dark,
 				}
 			end,
-            ]]
 		})
 		vim.cmd("colorscheme tokyonight-night")
 	end,
