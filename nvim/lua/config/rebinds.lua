@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>fb", telescope_builtin.buffers, { desc = "Telescope
 vim.keymap.set("n", "<leader>fh", telescope_builtin.help_tags, { desc = "Telescope help tags" })
 
 -- Neotree
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>")
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>")
 
 -- LSP
 vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {})
@@ -24,6 +24,8 @@ local conform = require("conform")
 vim.keymap.set("n", "<leader>c", conform.format, {})
 
 -- Harpoon
+-- harpoon.lua already bounded normal mode <C-e> to the menu
+--
 local harpoon = require("harpoon")
 vim.keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
@@ -33,16 +35,16 @@ vim.keymap.set("n", "<leader>r", function()
 	harpoon:list():remove()
 end)
 
-vim.keymap.set("n", "<C-j>", function()
+vim.keymap.set("n", "<C-h>", function()
 	harpoon:list():select(1)
 end)
-vim.keymap.set("n", "<C-k>", function()
+vim.keymap.set("n", "<C-j>", function()
 	harpoon:list():select(2)
 end)
-vim.keymap.set("n", "<C-l>", function()
+vim.keymap.set("n", "<C-k>", function()
 	harpoon:list():select(3)
 end)
-vim.keymap.set("n", "<C-;>", function()
+vim.keymap.set("n", "<C-l>", function()
 	harpoon:list():select(4)
 end)
 
