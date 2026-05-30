@@ -16,4 +16,6 @@ vim.opt.relativenumber = false -- true
 
 require("config.lsp-configs")
 require("config.rebinds")
-require("config.treesitter")
+
+-- TODO: native neovim treesitter config
+-- require("config.treesitter")
