@@ -8,7 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="darkblood"
 ZSH_THEME="duellj"
 
 # Set list of themes to pick from when loading at random
@@ -124,6 +123,9 @@ export PYTHON_HISTORY='/dev/null'
 
 # Created by `pipx` on 2026-06-06 00:38:25
 export PATH="$PATH:/home/tomc/.local/bin"
+
+# Cargo
+export PATH="$PATH:/home/tomc/.cargo/bin"
 
 # Zig
 export PATH="$PATH:/home/tomc/tools/zig"

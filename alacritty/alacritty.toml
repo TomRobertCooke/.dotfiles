@@ -1,12 +1,11 @@
 [general]
 import = [
-    "tokyonight_night.toml"
-    "/wsl_alacritty.toml"
+  "rose-pine.toml",
 ]
 
 [window]
 padding = { x = 5, y = 5 }
-opacity = 1
+opacity = 0.95
 decorations = "none"
 startup_mode = "Maximized"
 

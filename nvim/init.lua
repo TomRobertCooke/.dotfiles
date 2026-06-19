@@ -116,6 +116,7 @@ vim.keymap.set(
 
 -- just in case
 require("oil").setup()
+vim.keymap.set("n", "<leader>o", ":Oil<CR>")
 
 local cmp = require("blink.cmp")
 cmp.build():pwait()
@@ -126,13 +127,14 @@ cmp.setup({
 	fuzzy = { implementation = "rust" },
 })
 
-require("rose-pine").setup()
+require("rose-pine").setup({
+  styles = {
+    transparency = true,
+  },
+})
 vim.cmd("colorscheme rose-pine")
 
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
-
--- auto braces
--- vim.keymap.set("i", "{<cr>", "{<cr>}<esc>O")
