@@ -117,5 +117,13 @@ alias thmsetup='~/.config/.dotfiles/scripts/thmsetup.sh'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+pyenv global 3.14.5 2.7.18
 
-unset HISTFILE
+export HISTFILE='/dev/null'
+export PYTHON_HISTORY='/dev/null'
+
+# Created by `pipx` on 2026-06-06 00:38:25
+export PATH="$PATH:/home/tomc/.local/bin"
+
+# Zig
+export PATH="$PATH:/home/tomc/tools/zig"

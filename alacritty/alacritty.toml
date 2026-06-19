@@ -1,6 +1,7 @@
 [general]
 import = [
     "tokyonight_night.toml"
+    "/wsl_alacritty.toml"
 ]
 
 [window]
