@@ -107,6 +107,7 @@ fi
 alias ls='ls --color=tty'
 alias ll='ls -Altrh'
 alias la='ls -A'
+alias thmsetup='~/.config/.dotfiles/scripts/thmsetup.sh'
 
 # Load pyenv automatically by appending
 # the following to
