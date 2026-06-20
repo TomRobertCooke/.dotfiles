@@ -121,9 +121,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 if [[ $HOST = "parrot" ]]; then
-  pyenv global 3.13.2 2.7.18
+  pyenv global 3.13.2 2.7.18 system
 else
-  pyenv global 3.14.5 2.7.18
+  pyenv global 3.14.5 2.7.18 system
 fi
 
 export HISTFILE='/dev/null'
@@ -137,3 +137,7 @@ export PATH="$PATH:/home/tomc/.cargo/bin"
 
 # Zig
 export PATH="$PATH:/home/tomc/tools/zig"
+
+# Extra environment variables
+export XDG_CONFIG="$HOME/.config"
+export DOTFILES_DIR="$XDG_CONFIG/.dotfiles"
