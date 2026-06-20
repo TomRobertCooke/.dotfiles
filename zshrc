@@ -8,7 +8,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="duellj"
+if [[ $HOST = "parrot" ]]; then
+  ZSH_THEME="tomc"
+else
+  ZSH_THEME="duellj"
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,7 +120,11 @@ alias thmsetup='~/.config/.dotfiles/scripts/thmsetup.sh'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-pyenv global 3.14.5 2.7.18
+if [[ $HOST = "parrot" ]]; then
+  pyenv global 3.13.2 2.7.18
+else
+  pyenv global 3.14.5 2.7.18
+fi
 
 export HISTFILE='/dev/null'
 export PYTHON_HISTORY='/dev/null'
