@@ -137,7 +137,3 @@ export PATH="$PATH:/home/tomc/.cargo/bin"
 
 # Zig
 export PATH="$PATH:/home/tomc/tools/zig"
-
-# Extra environment variables
-export XDG_CONFIG="$HOME/.config"
-export DOTFILES_DIR="$XDG_CONFIG/.dotfiles"
