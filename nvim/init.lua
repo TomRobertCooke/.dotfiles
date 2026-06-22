@@ -116,7 +116,7 @@ vim.keymap.set(
 
 -- just in case
 require("oil").setup()
-vim.keymap.set("n", "<leader>o", ":Oil<CR>")
+vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
 
 local cmp = require("blink.cmp")
 cmp.build():pwait()

@@ -8,11 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-if [[ $HOST = "parrot" ]]; then
-  ZSH_THEME="tomc"
-else
-  ZSH_THEME="duellj"
-fi
+ZSH_THEME="tomc"
+# I also like duellj, but I want to take a shot at my own
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,7 +107,10 @@ fi
 alias ls='ls --color=tty'
 alias ll='ls -Altrh'
 alias la='ls -A'
-alias thmsetup='~/.config/.dotfiles/scripts/thmsetup.sh'
+
+export XDG_CONFIG="$HOME/.config"
+export DOTFILES="$XDG_CONFIG/.dotfiles"
+alias thmsetup="source $DOTFILES/scripts/thmsetup.sh"
 
 # Load pyenv automatically by appending
 # the following to
@@ -126,14 +126,38 @@ else
   pyenv global 3.14.5 2.7.18 system
 fi
 
+# Unset history files
 export HISTFILE='/dev/null'
 export PYTHON_HISTORY='/dev/null'
+
+# Link other history files to /dev/null or delete where possible
+if [[ -n "$HOME/.bash_history" ]]; then rm -rf "$HOME/.bash_history"; fi
+if [[ -n "$HOME/.python_history" ]]; then rm -rf "$HOME/.python_history"; fi
+
+LESSHST="$HOME/.lesshst"
+if [[ ! -L "$LESSHST" || ! "$(readlink -- $LESSHST)" ]]; then
+  ln -sf "/dev/null" "$LESSHST"
+fi
+
+VIMINFO="$HOME/.viminfo"
+if [[ ! -L "$VIMINFO" || ! "$(readlink -- $VIMINFO)" ]]; then
+  ln -sf "/dev/null" "$VIMINFO" 
+fi
+
+WGET_HSTS="$HOME/.wget-hsts"
+if [[ ! -L "$WGET_HSTS" || ! "$(readlink -- $WGET_HSTS)" ]]; then
+  ln -sf "/dev/null" "$WGET_HSTS"
+fi
 
 # Created by `pipx` on 2026-06-06 00:38:25
 export PATH="$PATH:/home/tomc/.local/bin"
 
-# Cargo
-export PATH="$PATH:/home/tomc/.cargo/bin"
+# Cargo installation
+export PATH="$PATH:$HOME/.cargo/bin"
 
-# Zig
-export PATH="$PATH:/home/tomc/tools/zig"
+# Zig installation
+export PATH="$PATH:$HOME/tools/zig"
+
+if [[ -z "$TMUX" ]]; then
+  fastfetch
+fi
